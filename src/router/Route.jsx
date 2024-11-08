@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layout/HomeLayout";
 import Home from "../page/Home/Home";
 import MealDetails from "../page/MealDetails/MealDetails";
+import MessWallet from "../page/MessWallet/MessWallet";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "mess-wallet",
-                element: <h1>Mess wallet</h1>
+                element: <MessWallet />
             }
         ]
     }
