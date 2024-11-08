@@ -2,6 +2,7 @@
 import { CgProfile } from "react-icons/cg"
 import { IoIosNotifications } from "react-icons/io"
 import { MdMenu } from "react-icons/md"
+import { Link } from "react-router-dom"
 
 
 const Navbar = ({setIsOpen, open}) => {
@@ -12,7 +13,7 @@ const Navbar = ({setIsOpen, open}) => {
             <h1 className="text-2xl font-semibold">Tajbir islam</h1>
         </div>
         <div className="flex gap-5 items-center">
-            <CgProfile className="text-2xl mt-auto cursor-pointer" />
+            <Link to="/profile"><CgProfile className="text-2xl mt-auto cursor-pointer" /></Link>
             <IoIosNotifications className="text-2xl mt-auto cursor-pointer" />
         </div>
     </div>

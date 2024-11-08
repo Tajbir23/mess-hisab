@@ -4,6 +4,9 @@ import Home from "../page/Home/Home";
 import MealDetails from "../page/MealDetails/MealDetails";
 import MessWallet from "../page/MessWallet/MessWallet";
 import MessCost from "../page/MessCost/MessCost";
+import Members from "../page/Members/Members";
+import MyPayments from "../page/MyPayments/MyPayments";
+import Profile from "../page/Profile/Profile";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +32,18 @@ const router = createBrowserRouter([
             {
                 path: "mess-wallet",
                 element: <MessWallet />
+            },
+            {
+                path: "members",
+                element: <Members />
+            },
+            {
+                path: "my-payments",
+                element: <MyPayments />
+            },
+            {
+                path: "profile",
+                element: <Profile />
             }
         ]
     }

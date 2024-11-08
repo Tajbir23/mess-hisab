@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { FaHome, FaUsers } from "react-icons/fa"
-import { MdOutlineMenuOpen } from "react-icons/md"
+import { MdOutlineMenuOpen, MdOutlinePayments } from "react-icons/md"
 import { Link } from "react-router-dom"
 
 const Sidebar = ({className = "", setIsOpen}) => {
@@ -20,6 +20,10 @@ const Sidebar = ({className = "", setIsOpen}) => {
                 <Link to="/members" className="flex gap-5 items-center hover:bg-green-700 p-2 rounded-md">
                     <FaUsers className="text-2xl mt-auto cursor-pointer" />
                     <p>Members</p>
+                </Link>
+                <Link to="/my-payments" className="flex gap-5 items-center hover:bg-green-700 p-2 rounded-md">
+                    <MdOutlinePayments className="text-2xl mt-auto cursor-pointer" />
+                    <p>My payments</p>
                 </Link>
             </ul>
         </div>
