@@ -3,6 +3,7 @@ import HomeLayout from "../layout/HomeLayout";
 import Home from "../page/Home/Home";
 import MealDetails from "../page/MealDetails/MealDetails";
 import MessWallet from "../page/MessWallet/MessWallet";
+import MessCost from "../page/MessCost/MessCost";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "mess-cost",
-                element: <h1>Mess cost</h1>
+                element: <MessCost />
             },
             {
                 path: "mess-wallet",
