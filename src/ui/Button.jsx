@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
 
-const Button = ({children, className = "", onClick}) => {
+const Button = ({children, className = "", onClick, type}) => {
   return (
-    <button onClick={onClick} className={`px-5 py-1 rounded-md ${className} `}>{children}</button>
+    <button type={type} onClick={onClick} className={`px-5 py-1 rounded-md ${className} `}>{children}</button>
   )
 }
 

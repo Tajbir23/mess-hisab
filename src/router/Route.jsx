@@ -7,11 +7,15 @@ import MessCost from "../page/MessCost/MessCost";
 import Members from "../page/Members/Members";
 import MyPayments from "../page/MyPayments/MyPayments";
 import Profile from "../page/Profile/Profile";
+import Login from "../page/Authentication/Login";
+import Signup from "../page/Authentication/Signup";
+import UserProtectedRoute from "./UserProtectedRoute";
+
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <HomeLayout />,
+        element: <UserProtectedRoute><HomeLayout /></UserProtectedRoute>,
         children: [
             {
                 path: "/",
@@ -46,6 +50,14 @@ const router = createBrowserRouter([
                 element: <Profile />
             }
         ]
+    },
+    {
+        path: "login",
+        element: <Login />
+    },
+    {
+        path: "signup",
+        element: <Signup />
     }
 ])
 
