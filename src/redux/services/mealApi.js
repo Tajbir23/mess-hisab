@@ -20,7 +20,11 @@ export const mealApi = createApi({
                 method: "POST",
                 body
             }),
-            invalidatesTags: ["meal", "user"]
+            invalidatesTags: ["meals", "user"]
+        }),
+        getMeals: builder.query({
+            query: () => "/meals",
+            providesTags: ["meals"]
         })
     }),
 })

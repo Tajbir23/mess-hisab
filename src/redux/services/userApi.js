@@ -53,8 +53,17 @@ export const userApi = createApi({
             }),
             invalidatesTags: ["users"]
         }),
+
+        updateWallet: builder.mutation({
+            query: ({userId, body}) => ({
+                url: `/update-wallet/${userId}`,
+                method: "PATCH",
+                body
+            }),
+            invalidatesTags: ["users"]
+        })
         
     })
 })
 
-export const { useLoginMutation, useRegisterMutation, useGetUserQuery, useGetAllUsersQuery, useUpdateStatusMutation, useUpdateRoleMutation } = userApi
+export const { useLoginMutation, useRegisterMutation, useGetUserQuery, useGetAllUsersQuery, useUpdateStatusMutation, useUpdateRoleMutation, useUpdateWalletMutation } = userApi

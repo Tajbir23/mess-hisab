@@ -18,13 +18,23 @@ const Modal = ({setModal, title}) => {
         }
     }
     
-    const handleSubmit = (default_value) => {
-        if(title === "extra Cost") {
-           const body = {extraCost: default_value}
-            addMeal(body)
-        } else {
-            const body = {[title]: default_value}
-            addMeal(body)
+    const handleSubmit = async(default_value) => {
+        try {
+            if(title === "extra Cost") {
+                const body = {extraCost: default_value}
+                 const response = await addMeal(body).unwrap()
+                 if(response){
+                     location.reload()
+                 }
+             } else {
+                 const body = {[title]: default_value}
+                 const response = await addMeal(body).unwrap()
+                 if(response){
+                     location.reload()
+                 }
+             }
+        } catch (error) {
+            console.log(error)
         }
         
     }

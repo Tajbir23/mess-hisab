@@ -3,6 +3,7 @@ import Navbar from "../page/Navbar/Navbar"
 import { useState } from "react"
 import Sidebar from "../component/Sidebar"
 import { useGetUserQuery } from "../redux/services/userApi"
+import Button from "../ui/Button"
 
 
 const HomeLayout = () => {
@@ -14,6 +15,7 @@ const HomeLayout = () => {
         {currentData.user.status === "pending" | currentData.user.status === "block" ? <div className="fixed h-screen w-screen flex flex-col items-center justify-center bg-black z-50 text-white " >
           <h1 className="text-2xl font-semibold">Welcome {currentData?.user?.name}</h1>
           <p className="text-xl font-semibold break-words">Your account is pending, please wait for approval</p>
+          <Button onClick={() => location.reload()} className="bg-green-500">Reload</Button>
         </div> : currentData.user.status === "confirmed" && <>
         <Navbar setIsOpen={setIsOpen} open={open} />
         <div className="p-5">
